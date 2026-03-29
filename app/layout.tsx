@@ -92,6 +92,17 @@ export default function RootLayout({
               >
                 Cities
               </a>
+              <a
+                href="/guides"
+                style={{
+                  color: "#9ca3af",
+                  fontSize: "0.875rem",
+                  fontFamily: "'Outfit', sans-serif",
+                  textDecoration: "none",
+                }}
+              >
+                Guides
+              </a>
             </nav>
           </div>
         </header>
