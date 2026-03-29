@@ -8,30 +8,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   const entries: MetadataRoute.Sitemap = [
-    // Home
     {
       url: baseUrl,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 1.0,
     },
-    // Services index
     {
       url: `${baseUrl}/services`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
     },
-    // Cities index
     {
       url: `${baseUrl}/cities`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/guides`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/guides/how-to-hire-a-contractor`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/home-renovation-cost-guide`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/how-to-get-home-service-quotes`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/save-money-on-home-services`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 
-  // Service hub pages
   for (const service of services) {
     entries.push({
       url: `${baseUrl}/services/${service.slug}`,
@@ -41,7 +67,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // City hub pages
   for (const city of cities) {
     entries.push({
       url: `${baseUrl}/cities/${city.slug}`,
@@ -51,7 +76,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // Service+city pages (2,500)
   for (const service of services) {
     for (const city of cities) {
       entries.push({
