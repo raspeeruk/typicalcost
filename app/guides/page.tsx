@@ -39,12 +39,43 @@ const guides = [
     tag: "Savings",
     readTime: "10 min read",
   },
+  {
+    href: "/guides/how-to-read-a-home-inspection-report",
+    title: "How to Read a Home Inspection Report",
+    description:
+      "What to negotiate, what to ignore, and when to walk away. A practical triage guide for buyers.",
+    tag: "Buying",
+    readTime: "8 min read",
+  },
+  {
+    href: "/guides/roof-replacement-cost-guide",
+    title: "Roof Replacement Cost Guide",
+    description:
+      "National averages, cost by material (asphalt, metal, slate), and everything that affects your final price in 2025.",
+    tag: "Roofing",
+    readTime: "9 min read",
+  },
+  {
+    href: "/guides/kitchen-remodel-cost-guide",
+    title: "Kitchen Remodel Cost Guide",
+    description:
+      "Budget ($10K–$25K), mid-range ($25K–$60K), and high-end ($60K+) breakdowns. Where money goes and where to save.",
+    tag: "Kitchen",
+    readTime: "9 min read",
+  },
+  {
+    href: "/guides/hvac-replacement-cost-guide",
+    title: "HVAC Replacement Cost Guide",
+    description:
+      "Repair vs. replace decision framework, cost by system type, and 2025 rebates including the IRA heat pump credit.",
+    tag: "HVAC",
+    readTime: "8 min read",
+  },
 ];
 
 export default function GuidesHubPage() {
   return (
     <div style={{ backgroundColor: "#f8f9fa", minHeight: "100vh", fontFamily: "'Outfit', sans-serif" }}>
-      {/* Hero */}
       <section style={{ backgroundColor: "#1a2332", padding: "64px 24px 56px" }}>
         <div style={{ maxWidth: "768px", margin: "0 auto" }}>
           <p
@@ -78,7 +109,6 @@ export default function GuidesHubPage() {
         </div>
       </section>
 
-      {/* Guide cards */}
       <section style={{ maxWidth: "768px", margin: "48px auto", padding: "0 24px" }}>
         <div
           style={{
@@ -139,7 +169,6 @@ export default function GuidesHubPage() {
           ))}
         </div>
 
-        {/* CTA to home */}
         <div
           style={{
             marginTop: "3rem",
