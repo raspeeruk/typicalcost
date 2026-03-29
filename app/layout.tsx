@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID;
+
 export const metadata: Metadata = {
   title: {
     default: "TypicalCost — Real prices. Real cities. No surprises.",
@@ -37,6 +39,19 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
+        {GA4_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA4_ID}');`,
+              }}
+            />
+          </>
+        )}
       </head>
       <body>
         <header style={{ backgroundColor: "#1a2332" }} className="py-4 px-6">
